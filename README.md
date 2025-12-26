@@ -11,20 +11,24 @@ The official JA4+ Zeek Plugin successfully calculates various JA4+ fingerprints 
 
 The primary goal of this project is to create an easy, manual process for pulling out key JA4+ data on demand for threat hunting, baselining, and analysis. Future plans include automating these scripts for scheduled, hourly data extraction.
 
+** Attention ** Be congnizant of the following when adjusting to your environment. 
+
+The defualt log path Zeek uses is /opt/zeek/logs/current/ & /opt/zeek/logs/YYYY-MM-DD/ when archived. 
+The path to the Current logs in these scripts are /mnt/zeek_logs/current/*.log. Zeek is running off of a mounted flash drive on a Raspberry Pi 4 B+ 
 
 # Please see man_pages for a demonstration on how to use these scripts
 
 
-For Ja4TCP example output: 
+For Ja4T (TCP) example output: 
 
 [![j4TCP](ja4t_tcp_output.png)](https://github.com/cisco0pete/JA4_Zeek/blob/main/parse_ja4t_tcp_logs_REV_3.py)
 
 
-For Ja4HTTP example output: 
+For Ja4H (HTTP) example output: 
 
 [![j4http](ja4h_http_output.png)](https://github.com/cisco0pete/JA4_Zeek/blob/main/parse_ja4h_http_logs_REV_0.py)
 
-For Ja4 & Ja4s TLS example output:
+For Ja4 & Ja4s (TLS) example output:
 
 [![j4 TLS](ja4_output.png)](https://github.com/cisco0pete/JA4_Zeek/blob/main/parse_ja4s_ssl_log_REV_0.py)
 
